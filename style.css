@@ -33,15 +33,59 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* outline: 1px solid limegreen; */
+  outline: 1px solid limegreen;
 }
 
 /* Layout */
 .container {
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
   display: flex;
   flex-direction: column;
+  width: 90%;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+.card-image {
+  display: block;
+  max-width: 100%;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.plan-detail {
+  display: flex;
+}
+
+.btn {
+  border: none;
+  padding: 1rem;
+}
+
+/* Color */
+.container {
+  background-color: var(--pale-blue);
+}
+
+.card {
+  background-color: #fff;
+}
+
+.plan-detail {
+  background-color: var(--very-pale-blue);
+}
+
+.btn {
+  background-color: var(--bright-blue);
+  color: var(--very-pale-blue);
+}
+
+.btn-cancel {
+  background-color: #fff;
+  color: var(--desaturated-blue);
 }
