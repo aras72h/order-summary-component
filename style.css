@@ -16,12 +16,12 @@
 }
 
 :root {
-  /* Type */
-  --type-face: 'Red Hat Display', sans-serif;
+  /* Type Variables */
+  --type-face: 'RedHatDisplay', sans-serif;
   --base-font-size: 100%;
   font-family: var(--type-face);
 
-  /* Color */
+  /* Color Variables */
   --pale-blue: hsl(225, 100%, 94%);
   --bright-blue: hsl(245, 75%, 52%);
   --very-pale-blue: hsl(225, 100%, 98%);
@@ -33,7 +33,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  outline: 1px solid limegreen;
+  /* outline: 1px solid limegreen; */
 }
 
 /* Layout */
@@ -47,25 +47,100 @@
 .card {
   display: flex;
   flex-direction: column;
-  width: 90%;
   align-items: center;
-  border-radius: 1rem;
+  width: 90%;
+  border-radius: 1.44rem;
+  max-width: 400px;
 }
 
 .card-image {
   display: block;
   max-width: 100%;
-  border-radius: 1rem 1rem 0 0;
+  border-radius: 1.44rem 1.44rem 0 0;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.card h1 {
+  margin: .8rem 0;
+}
+
+.card-description {
+  /* margin-top: 1.5rem; */
+  padding: .5rem 0;
 }
 
 .plan-detail {
   display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem 1.2rem;
+  border-radius: .8rem;
+  margin: 1rem 0;
+}
+
+.plan-icon {
+  /* margin-right: auto; */
+  /* width: 15%; */
+  /* width: 4rem; */
+}
+
+.plan-selected {
+  /* width: 60%; */
+  padding: 0 1.4rem;
+}
+
+.plan-price {
+  margin-top: .3rem;
+}
+
+.plan-detail a {
+  margin-left: auto;
 }
 
 .btn {
   border: none;
   padding: 1rem;
+  width: 100%;
+  border-radius: .8rem;
+  /* margin: .2rem; */
+  font-family: inherit;
+  margin-top: .5rem;
 }
+
+/* Type */
+.card h1 {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.card-description {
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.plan-name {
+  font-weight: 900;
+}
+
+.btn {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+a:link,
+a:visited {
+  font-size: .9rem;
+  font-weight: 900;
+}
+
 
 /* Color */
 .container {
@@ -74,10 +149,28 @@
 
 .card {
   background-color: #fff;
+  /* box-shadow: 0 1rem 3rem var(--dark-blue); */
+}
+
+.card h1 {
+  color: var(--dark-blue);
+}
+
+.card-description {
+  color: var(--desaturated-blue);
 }
 
 .plan-detail {
   background-color: var(--very-pale-blue);
+}
+
+.plan-price {
+  color: var(--desaturated-blue);
+}
+
+a:link,
+a:visited {
+  color: var(--bright-blue);
 }
 
 .btn {
@@ -85,7 +178,11 @@
   color: var(--very-pale-blue);
 }
 
+.btn-submit {
+  box-shadow: 0 4px 30px -10px var(--bright-blue);
+}
+
 .btn-cancel {
-  background-color: #fff;
+  background-color: transparent;
   color: var(--desaturated-blue);
 }
