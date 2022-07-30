@@ -38,26 +38,26 @@
 
 /* Layout */
 .container {
-  min-height: 100vh;
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
+  min-height: 100vh;
 }
 
 .card {
+  align-items: center;
+  border-radius: 1.44rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 87%;
-  border-radius: 1.44rem;
   max-width: 400px;
-  padding-bottom: 0.402rem;
+  padding-bottom: .402rem;
+  width: 87%;
 }
 
 .card-image {
+  border-radius: 1.44rem 1.44rem 0 0;
   display: block;
   max-width: 100%;
-  border-radius: 1.44rem 1.44rem 0 0;
 }
 
 .card h1 {
@@ -65,17 +65,17 @@
 }
 
 .card-description {
-  padding: 0.579rem 1.728rem;
+  padding: .579rem 1.728rem;
 }
 
 .plan-detail {
-  display: flex;
-  width: 90%;
-  justify-content: flex-start;
   align-items: center;
-  padding: 1rem 1.2rem;
   border-radius: .833rem;
+  display: flex;
+  justify-content: flex-start;
   margin: 1rem 0;
+  padding: 1rem 1.2rem;
+  width: 90%;
 }
 
 .plan-selected {
@@ -91,12 +91,11 @@
 }
 
 .btn {
+  border-radius: .833rem;
   border: none;
+  margin: .402rem 0;
   padding: 1rem;
   width: 90%;
-  border-radius: .833rem;
-  font-family: inherit;
-  margin: .402rem 0;
 }
 
 /* Type */
@@ -107,8 +106,8 @@
 
 .card-description {
   font-size: 1rem;
-  text-align: center;
   line-height: 1.6;
+  text-align: center;
 }
 
 .plan-name {
